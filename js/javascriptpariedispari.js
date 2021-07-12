@@ -12,4 +12,45 @@
 // 5 creare una funzione che stabilisca se la somma è pari o dispari (FUNZIONE)
 // 6 dichiara chi ha vinto
 
+/*----------------------------FUNZIONI---------------------- */
 
+function pariDispari(numero) {
+    if (numero % 2 === 0) {
+    return 'pari';
+    } 
+    return 'dispari';
+}
+
+function numeroCaso(min, max) {
+   return Math.floor(Math.random() * (max - min)+min);
+}
+
+/*----------------------------VARIANTI---------------------- */
+
+var pariOdispari = prompt('Pari o dispari?', 'PARI   DISPARI');
+var numeroUtente = parseInt(prompt('scegli un numero da 1 a 5', '4'));
+var numero = numeroCaso(1, 5);
+var somma = numero + numeroUtente;
+
+/*-----------------------DICHIARAZIONI----------------------- */
+
+if (pariDispari(somma) == pariOdispari) {
+    var win = document.getElementById('v_p');
+    v_p.innerHTML = ('HAI VINTO!');
+} else {
+    v_p.innerHTML = ('HAI PERSO!');
+}
+
+/*----------------------------STAMPA-------------------------- */
+
+var parDisp = document.getElementById('Par_Disp');
+Par_Disp.innerHTML = pariOdispari;
+
+var numeroU= document.getElementById('num_ut');
+num_ut.innerHTML = numeroUtente;
+
+var numeroComp= document.getElementById('num_Pc');
+num_Pc.innerHTML = numero;
+
+var sommaPcUt= document.getElementById('nUnPC');
+nUnPC.innerHTML = somma;
