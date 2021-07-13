@@ -22,7 +22,7 @@ function pariDispari(numero) {
 }
 
 function numeroCaso(min, max) {
-   return Math.floor(Math.random() * (max - min)+min);
+   return Math.floor(Math.random() * (max - min +1)+min);
 }
 
 /*----------------------------VARIANTI---------------------- */
